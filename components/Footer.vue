@@ -5,14 +5,15 @@
       'grey',
       'darken-4',
       'white--text',
-      'px-8',
+      'px-12',
       'justify-space-between',
       'pt-12',
       $vuetify.breakpoint.smAndDown ? 'flex-column-reverse' : 'flex-row',
     ]"
   >
-    <div class="footer__info">
+    <div class="footer__info d-flex flex-column">
       <h2 class="mt-5">Contact Us</h2>
+
       <p class="footer__description">
         It’s very easy to get in touch with us. Just use the contact form or pay
         us a visit for a coffee at the office. Dynamically innovate competitive
@@ -27,25 +28,25 @@
         Email : hello@yourdomain.com
       </p>
 
-      <div class="container__social">
-        <div class="container__social-media-icons">
-          <i class="fi fi-facebook" aria-hidden="true"></i>
-          <i class="fi fi-twitter" aria-hidden="true"></i>
-          <i class="fi fi-instagram" aria-hidden="true"></i>
-          <i class="fi fi-linkedin" aria-hidden="true"></i>
-        </div>
+      <PaywallLogo />
 
-        <small class="text__copyright">
-          Copyright (c) 2020. All Rights reserved. Intelligent Innovations Co.
-          Made with by Intelligent Innovations Co.
-        </small>
+      <div class="container__social-media-icons">
+        <i class="fi fi-facebook" aria-hidden="true"></i>
+        <i class="fi fi-twitter" aria-hidden="true"></i>
+        <i class="fi fi-instagram" aria-hidden="true"></i>
+        <i class="fi fi-linkedin" aria-hidden="true"></i>
       </div>
+
+      <small class="text__copyright">
+        Copyright (c) 2020. All Rights reserved. Intelligent Innovations Co.
+        Made with by Intelligent Innovations Co.
+      </small>
     </div>
 
-    <div class="footer__form">
+    <div class="footer__form d-flex flex-column align-start">
       <h3 class="mb-4">Reach Us Quickly</h3>
 
-      <div>
+      <div class="d-flex flex-column">
         <div class="d-flex justify-space-between">
           <v-text-field
             class="mr-4"
@@ -83,29 +84,39 @@
 </template>
 
 <script>
-export default {}
+import PaywallLogo from '~/components/legos/PaywallLogo'
+export default {
+  components: {
+    PaywallLogo,
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 small {
-  font-size: 0.6rem;
+  font-size: 0.65rem;
 }
 .footer__description {
   max-width: 30em;
 }
 
 .container__social-media-icons {
-  margin-bottom: 5em;
   width: 8em;
+  margin-top: 2em;
+  margin-bottom: 3em;
   display: flex;
   justify-content: space-between;
   > * {
     color: var(--text-on-surface);
   }
+}
+
+.text__copyright {
+  margin-bottom: 20px;
 }
 
 .footer__btn {
@@ -117,5 +128,7 @@ small {
   font-weight: bold;
   padding: 10px 50px;
   outline: none;
+  width: 120px;
+  align-self: flex-end;
 }
 </style>
