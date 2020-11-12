@@ -77,7 +77,8 @@
           height="120"
         ></v-text-field>
 
-        <button class="footer__btn">SEND</button>
+        <!-- <button class="footer__btn">SEND</button> -->
+        <btn-primary style="align-self: flex-end">Send</btn-primary>
       </div>
     </div>
   </footer>
@@ -85,9 +86,11 @@
 
 <script>
 import PaywallLogo from '~/components/legos/PaywallLogo'
+import BtnPrimary from '~/components/legos/buttons/BtnPrimary'
 export default {
   components: {
     PaywallLogo,
+    BtnPrimary,
   },
 }
 </script>
@@ -117,18 +120,5 @@ small {
 
 .text__copyright {
   margin-bottom: 20px;
-}
-
-.footer__btn {
-  background: transparent linear-gradient(270deg, #ff7597 0%, #ff0266 100%) 0%
-    0% no-repeat padding-box;
-  border-radius: 30px;
-  opacity: 1;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 10px 50px;
-  outline: none;
-  width: 120px;
-  align-self: flex-end;
 }
 </style>
