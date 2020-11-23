@@ -34,17 +34,18 @@ export default {
 <style lang="scss" scoped>
 .container__card {
   display: grid;
-  grid-template-columns: 200px 250px;
+  width: 350px;
+  grid-template-columns: 35% 65%;
   border-radius: 5px;
 
   P {
-    font-size: 0.85rem;
+    font-size: 0.85em;
   }
 }
 
 .container__card > :nth-child(2) {
   background-color: #1b1b1b;
-  padding: 1em;
+  padding: 0.85em;
 }
 
 .wrapper-img {

@@ -1,27 +1,6 @@
 <template>
   <div class="container__card white--text">
     <div class="wrapper-img">
-      <svg
-        class="overlay"
-        viewBox="0 0 545 280"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect class="overlay" fill="url(#paint0_linear)" />
-        <defs>
-          <linearGradient
-            id="paint0_linear"
-            x1="400.862"
-            y1="273.758"
-            x2="401.355"
-            y2="-109.982"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0.307292" stop-opacity="0.43" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
-          </linearGradient>
-        </defs>
-      </svg>
       <div class="d-flex align-center group--avatar">
         <v-avatar class="avatar">
           <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="" />
@@ -100,7 +79,8 @@ export default {
 }
 
 .wrapper-img {
-  background-image: url('https://images.unsplash.com/photo-1604945423506-79b3f714707e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1434&q=80');
+  background: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.5)),
+    url('https://images.unsplash.com/photo-1604945423506-79b3f714707e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1434&q=80');
   background-size: cover;
   position: relative;
 }

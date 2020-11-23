@@ -20,8 +20,9 @@
         class="container__stream-label d-flex justify-space-between white--text align-baseline"
       >
         <h2>Upcoming Streams</h2>
-
-        <small class="mr-7">View all</small>
+        <nuxt-link to="/upcomingstreams">
+          <small class="mr-7">View all</small>
+        </nuxt-link>
       </div>
       <UpcomingSlider />
     </div>

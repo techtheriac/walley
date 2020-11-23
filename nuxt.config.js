@@ -20,7 +20,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['@/assets/css/global.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
@@ -37,12 +37,7 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ['nuxt-webfontloader'],
-  webfontloader: {
-    google: {
-      families: ['Raleway:100,200,300,400,500,600,700&display=swap']
-    }
-  },
+  modules: [],
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
