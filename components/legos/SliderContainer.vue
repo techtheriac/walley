@@ -17,6 +17,8 @@ export default {}
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 
   > div {
     scroll-snap-align: start;

@@ -16,13 +16,13 @@ export default {
 
 <style lang="scss" scoped>
 .btn__primary {
-  background: transparent linear-gradient(270deg, #ff7597 0%, #ff0266 100%) 0%
-    0% no-repeat padding-box;
+  background: transparent;
   border-radius: 30px;
+  border: 1px solid #fff;
   font-size: 13px;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 10px 50px;
+  padding: 10px 60px;
   outline: none;
 }
 </style>

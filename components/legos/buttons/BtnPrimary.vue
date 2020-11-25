@@ -1,11 +1,17 @@
 <template>
-  <button class="btn__primary">
+  <button class="btn__primary" @click="onClick">
     <slot></slot>
   </button>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    onClick(e) {
+      this.$emit('click', e)
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -17,6 +23,6 @@ export default {}
   font-weight: bold;
   padding: 8px 20px;
   outline: none;
-  width: 80px;
+  /* width: 80px; */
 }
 </style>

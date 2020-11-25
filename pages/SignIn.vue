@@ -1,7 +1,9 @@
 <template>
   <div class="container__signin">
     <div class="wrapper--img a">
-      <PaywallLogo />
+      <nuxt-link to="/">
+        <PaywallLogo />
+      </nuxt-link>
     </div>
     <div class="container__form b white--text d-flex flex-column align-center">
       <div class="wrapper--text d-flex flex-column align-center">

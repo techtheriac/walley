@@ -12,7 +12,9 @@
       'container__navigation',
     ]"
   >
-    <PaywallLogo />
+    <nuxt-link to="/">
+      <PaywallLogo />
+    </nuxt-link>
 
     <span class="small--text">CATEGORIES</span>
 
@@ -32,15 +34,18 @@
       v-if="this.$vuetify.breakpoint.lgAndUp"
       class="container__nav-actions d-flex"
     >
-      <div class="group__icon-upload d-flex flex-column">
+      <nuxt-link
+        to="/uploadcontent"
+        class="group__icon-upload d-flex flex-column"
+      >
         <img src="/plus.svg" width="30px" height="30px" alt="" />
         <span class="icon-label">upload</span>
-      </div>
+      </nuxt-link>
 
-      <div class="group__icon-live d-flex flex-column">
+      <nuxt-link to="/golive" class="group__icon-live d-flex flex-column">
         <img src="/live.svg" width="30px" height="30px" alt="" />
         <span class="icon-label">go live</span>
-      </div>
+      </nuxt-link>
 
       <div class="group__icon-streams d-flex flex-column">
         <img src="/stream.svg" width="30px" height="30px" alt="" />
@@ -55,7 +60,9 @@
       <div class="vl-divider"></div>
     </div>
     <div class="d-flex group--account">
-      <v-icon class="grey--text">mdi-bell</v-icon>
+      <nuxt-link to="/notifications">
+        <v-icon class="grey--text">mdi-bell</v-icon>
+      </nuxt-link>
       <btn-primary>login</btn-primary>
     </div>
   </nav>
