@@ -10,7 +10,7 @@
               <div class="tags">
                 <span v-for="j in 3" :key="j">#Cooking</span>
               </div>
-              <div class="reactions d-flex">
+              <div class="reactions d-flex align-center">
                 <v-icon>mdi-heart-outline</v-icon>
                 <small>102</small>
                 <v-icon>mdi-chat-outline</v-icon>
@@ -20,14 +20,14 @@
               </div>
             </div>
 
-            <div class="wrapper-details">
+            <div class="wrapper-details mt-3">
               <h3>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Repellendus
               </h3>
-              <span>
-                <v-icon>mdi-eye</v-icon>
-                <small>77</small>
+              <span class="d-flex align-end my-2">
+                <v-icon style="font-size: 13px">mdi-eye</v-icon>
+                <small class="ml-1">77</small>
               </span>
               <p>by Toby Jakande</p>
               <small>24/10/2020</small>
@@ -141,7 +141,7 @@ export default {
 @media screen and (min-width: 960px) {
   .container__profile {
     display: grid;
-    gap: 16px;
+    gap: 2.5em;
     grid-template-columns: 3fr 1fr;
   }
 }
@@ -162,15 +162,44 @@ export default {
     border-radius: 10px;
 
     .wrapper-stream {
-      height: 66%;
+      height: 64%;
       background-image: url('https://images.unsplash.com/photo-1606820920595-93727abac7e1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
       background-size: cover;
       border-radius: 10px;
     }
+  }
+}
 
-    /* .details-stream {
-      //
-    } */
+.tags {
+  > * + * {
+    margin-left: 10px;
+  }
+  span {
+    color: var(--secondary);
+    background-color: rgba(225, 2, 102, 0.1);
+    border-radius: 9px;
+    padding: 5px 7px;
+    font-size: 12px;
+  }
+}
+
+.reactions {
+  > :not(small) {
+    color: var(--secondary);
+  }
+
+  > * + * {
+    margin-left: 8px;
+  }
+}
+
+.wrapper-details {
+  span {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 14px;
   }
 }
 

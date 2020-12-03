@@ -1,5 +1,5 @@
 <template>
-  <div class="container__card white--text">
+  <nuxt-link to="/physicalevent" class="container__card white--text">
     <div class="wrapper-img"></div>
     <div>
       <card-label>Children Painting Event</card-label>
@@ -21,7 +21,7 @@
         </span>
       </div>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>

@@ -16,7 +16,33 @@
       <PaywallLogo />
     </nuxt-link>
 
-    <span class="small--text">CATEGORIES</span>
+    <v-menu offset-y>
+      <template
+        v-slot:activator="{
+          on,
+          attrs,
+        }"
+      >
+        <!-- <v-btn
+          color="primary"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          Dropdown
+        </v-btn> -->
+        <span class="small--text" v-bind="attrs" v-on="on">CATEGORIES</span>
+      </template>
+      <v-list>
+        <v-list-item
+          v-for="(item, index) in categories"
+          :key="index"
+          class="px-8"
+        >
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
 
     <v-text-field
       v-if="this.$vuetify.breakpoint.lgAndUp"
@@ -107,6 +133,15 @@ export default {
         { title: 'Uploaded Streams' },
         { title: 'Find Friends' },
         { title: 'Settings' },
+      ],
+      categories: [
+        { title: 'Business' },
+        { title: 'Cooking' },
+        { title: 'Fitness' },
+        { title: 'Software' },
+        { title: 'Fashion' },
+        { title: 'Kids' },
+        { title: 'Design' },
       ],
       dialog: false,
     }

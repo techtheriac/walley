@@ -14,7 +14,8 @@
 - GO LIVE - IN PROGRESS
 - Upload Content - DONE
 - Ondemand Streams
-- User Profile
+- User Profile - DONE
+- Physical Event - DONE
 
 ## Dialogs
 
