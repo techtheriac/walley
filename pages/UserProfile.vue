@@ -168,9 +168,9 @@ export default {
       border-radius: 10px;
     }
 
-    .details-stream {
+    /* .details-stream {
       //
-    }
+    } */
   }
 }
 
