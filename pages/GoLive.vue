@@ -41,7 +41,7 @@
         </p>
 
         <div v-for="i in 4" :key="i">
-          <div class="comment--buble d-flex">
+          <div class="comment--bubble d-flex">
             <v-avatar size="35">
               <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
             </v-avatar>
@@ -138,7 +138,7 @@ export default {
   font-size: 12px;
 }
 
-.comment--buble {
+.comment--bubble {
   background-color: #000;
   border-radius: 25px;
   padding: 5px;

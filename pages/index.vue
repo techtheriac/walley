@@ -78,6 +78,7 @@ export default {
     DiscoverSlider,
     OndemandSlider,
   },
+  data: () => ({}),
 }
 </script>
 

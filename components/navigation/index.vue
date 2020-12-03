@@ -34,28 +34,47 @@
       v-if="this.$vuetify.breakpoint.lgAndUp"
       class="container__nav-actions d-flex"
     >
-      <nuxt-link
-        to="/uploadcontent"
+      <!-- UPLOAD VERIFICATION DIALOG START-->
+      <v-dialog v-model="dialog" width="500">
+        <div
+          style="background-color: var(--surface)"
+          class="d-flex flex-column py-2"
+        >
+          <v-icon class="align-self-end mx-4" @click="dialog = false"
+            >mdi-close-circle-outline</v-icon
+          >
+        </div>
+        <UploadVerification />
+      </v-dialog>
+      <!-- UPLOAD VERIFICATION DIALOG END -->
+      <div
+        to="/"
         class="group__icon-upload d-flex flex-column"
+        v-bind="attrs"
+        v-on="on"
+        @click="dialog = true"
       >
         <img src="/plus.svg" width="30px" height="30px" alt="" />
         <span class="icon-label">upload</span>
-      </nuxt-link>
+      </div>
 
       <nuxt-link to="/golive" class="group__icon-live d-flex flex-column">
         <img src="/live.svg" width="30px" height="30px" alt="" />
         <span class="icon-label">go live</span>
       </nuxt-link>
 
-      <div class="group__icon-streams d-flex flex-column">
+      <nuxt-link
+        to="/discoverstreams"
+        class="group__icon-streams d-flex flex-column"
+      >
         <img src="/stream.svg" width="30px" height="30px" alt="" />
         <span class="icon-label">streams</span>
-      </div>
+      </nuxt-link>
 
-      <div class="group__icon-wallet d-flex flex-column">
+      <nuxt-link to="/wallet" class="group__icon-wallet d-flex flex-column">
         <img src="/wallet.svg" width="30px" height="30px" alt="" />
         <span class="icon-label">wallet</span>
-      </div>
+      </nuxt-link>
 
       <div class="vl-divider"></div>
     </div>
@@ -63,7 +82,9 @@
       <nuxt-link to="/notifications">
         <v-icon class="grey--text">mdi-bell</v-icon>
       </nuxt-link>
-      <btn-primary>login</btn-primary>
+      <btn-primary>
+        <nuxt-link to="/signin">Login</nuxt-link>
+      </btn-primary>
     </div>
   </nav>
 </template>
@@ -71,10 +92,12 @@
 <script>
 import PaywallLogo from '~/components/legos/PaywallLogo'
 import BtnPrimary from '~/components/legos/buttons/BtnPrimary'
+import UploadVerification from '~/components/dialogs/UploadVerification'
 export default {
   components: {
     PaywallLogo,
     BtnPrimary,
+    UploadVerification,
   },
   data() {
     return {
@@ -85,7 +108,13 @@ export default {
         { title: 'Find Friends' },
         { title: 'Settings' },
       ],
+      dialog: false,
     }
+  },
+  methods: {
+    onClick(e) {
+      this.$emit('click', e)
+    },
   },
 }
 </script>

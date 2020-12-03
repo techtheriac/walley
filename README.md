@@ -1,26 +1,28 @@
-# paywall-frontend
+# TODOS
 
-## Build Setup
+## Pages
 
-```bash
-# install dependencies
-$ npm install
+- Settings - DONE
+- Find Friends - DONE
+- Wallet Page
+- Top Recommended Streams -DONE
+- Upcoming Streams - DONE
+- Discover Streams - DONE
+- Uploaded Streams -DONE
+- Live Streams
+- Notification - DONE
+- GO LIVE - IN PROGRESS
+- Upload Content - DONE
+- Ondemand Streams
+- User Profile
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+## Dialogs
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-
-## Modules modules to use
-
-- google-fonts
-- imagemin
-- cloudinary
+- Verification - DONE
+- Book Ticket
+- Ticket
+- Live Stream Payment 01
+- Live Stream Payment 02
+- Live Stream Payment 03
+- Share
+- Reminder

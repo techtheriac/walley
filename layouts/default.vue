@@ -16,7 +16,10 @@ export default {
     navigation,
   },
   data() {
-    return {}
+    return {
+      overlay: true,
+      zIndex: 10,
+    }
   },
 }
 </script>
