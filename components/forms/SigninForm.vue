@@ -26,7 +26,7 @@
         dense
       ></v-text-field>
 
-      <btn-large class="align-self-center">SignUp</btn-large>
+      <btn-large class="align-self-center">Sign In</btn-large>
     </v-form>
   </div>
 </template>

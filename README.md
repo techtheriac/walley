@@ -4,7 +4,7 @@
 
 - Settings - DONE
 - Find Friends - DONE
-- Wallet Page
+- Wallet Page - IN PROGRESS
 - Top Recommended Streams -DONE
 - Upcoming Streams - DONE
 - Discover Streams - DONE
@@ -20,10 +20,10 @@
 ## Dialogs
 
 - Verification - DONE
-- Book Ticket
+- Book Ticket - DONE
 - Ticket
 - Live Stream Payment 01
 - Live Stream Payment 02
 - Live Stream Payment 03
 - Share
-- Reminder
+- Reminder - DONE

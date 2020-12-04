@@ -8,41 +8,43 @@
       alias.</small
     >
 
-    <v-form class="mt-5">
-      <v-text-field
-        v-model="phoneNumber"
-        label="Phone Number"
-        required
-        single-line
-        outlined
-        dark
-        dense
-        full-width="true"
-      ></v-text-field>
+    <v-form class="mt-5 d-flex flex-column align-center">
+      <div>
+        <v-text-field
+          v-model="phoneNumber"
+          label="Phone Number"
+          required
+          single-line
+          outlined
+          dark
+          dense
+          full-width="true"
+        ></v-text-field>
 
-      <v-text-field
-        v-model="email"
-        label="Enter email Address"
-        type="email"
-        required
-        single-line
-        outlined
-        dark
-        dense
-        full-width="true"
-      ></v-text-field>
+        <v-text-field
+          v-model="email"
+          label="Enter email Address"
+          type="email"
+          required
+          single-line
+          outlined
+          dark
+          dense
+          full-width="true"
+        ></v-text-field>
 
-      <v-text-field
-        v-model="accountNumber"
-        label="Account Number"
-        type="email"
-        required
-        single-line
-        outlined
-        dark
-        dense
-        full-width="true"
-      ></v-text-field>
+        <v-text-field
+          v-model="accountNumber"
+          label="Account Number"
+          type="email"
+          required
+          single-line
+          outlined
+          dark
+          dense
+          full-width="true"
+        ></v-text-field>
+      </div>
       <btn-primary>VERIFY</btn-primary>
     </v-form>
   </div>

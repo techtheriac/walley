@@ -13,10 +13,15 @@
           <p>by Toby Adamu</p>
         </div>
 
-        <div class="wrapper-reminder">
+        <button class="wrapper-reminder" @click="reminderDialog = true">
           <v-icon>mdi-alarm-multiple</v-icon>
-          <small>Set Reminder</small>
-        </div>
+          <small>Set a Reminder</small>
+        </button>
+        <!-- REMINDER DIALOG  START-->
+        <v-dialog v-model="reminderDialog" width="550">
+          <Reminder @hide-reminder-dialog="hideReminderDialog" />
+        </v-dialog>
+        <!-- REMINDER DIALOG  END-->
       </div>
     </div>
 
@@ -60,16 +65,45 @@
         <small class="align-reset">N 1,500</small>
       </div>
 
-      <btn-large>PAY FEE FOR BOOK</btn-large>
+      <btn-large @click="ticketDialog = true">PAY FEE FOR BOOK</btn-large>
+
+      <!-- TICKET DIALOG  START-->
+      <v-dialog v-model="ticketDialog" width="500">
+        <div
+          style="background-color: var(--surface)"
+          class="d-flex flex-column py-2"
+        >
+          <v-icon class="align-self-end mx-4" @click="ticketDialog = false"
+            >mdi-close-circle-outline</v-icon
+          >
+        </div>
+        <BookTicket />
+      </v-dialog>
+      <!-- TICKET DIALOG  END-->
     </div>
   </div>
 </template>
 
 <script>
+import BookTicket from '~/components/dialogs/BookTicket'
+import Reminder from '~/components/dialogs/Reminder'
 import BtnLarge from '~/components/legos/buttons/BtnLarge'
 export default {
   components: {
     BtnLarge,
+    BookTicket,
+    Reminder,
+  },
+  data() {
+    return {
+      ticketDialog: false,
+      reminderDialog: false,
+    }
+  },
+  methods: {
+    hideReminderDialog(e) {
+      this.reminderDialog = e
+    },
   },
 }
 </script>
@@ -82,7 +116,7 @@ export default {
 @media screen and (min-width: 960px) {
   .container__physical {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 1.2fr;
     gap: 2.5em;
   }
 }
@@ -110,6 +144,7 @@ export default {
     width: 50px;
     height: 50px;
     margin-bottom: 10px;
+    outline: none;
   }
 }
 .wrapper-img {
