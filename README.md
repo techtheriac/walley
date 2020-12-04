@@ -18,7 +18,9 @@
 - Physical Event - DONE
 
 ## Dialogs
-
+- Add Card
+- Withdraw
+- Fund Wallet
 - Verification - DONE
 - Book Ticket - DONE
 - Ticket
