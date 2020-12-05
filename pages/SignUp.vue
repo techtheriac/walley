@@ -46,7 +46,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 800px) {
   .container__signup {
     display: grid;
     grid-template-columns: 45vw 55vw;

@@ -1,6 +1,9 @@
 <template>
   <div class="white--text d-flex flex-column align-center">
-    <div class="container__avatar d-flex justify-center align-center">
+    <nuxt-link
+      :to="liveLink"
+      class="container__avatar d-flex justify-center align-center"
+    >
       <img
         class="avatar"
         src="https://images.unsplash.com/photo-1559563526-cff7656d1ae6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1498&q=80"
@@ -8,7 +11,7 @@
         width="80px"
         height="80px"
       />
-    </div>
+    </nuxt-link>
     <BtnLive class="displace-up" />
     <small class="">Clay Hassan</small>
   </div>
@@ -19,6 +22,12 @@ import BtnLive from '~/components/legos/buttons/BtnLive'
 export default {
   components: {
     BtnLive,
+  },
+  props: {
+    liveLink: {
+      type: String,
+      default: '/live',
+    },
   },
 }
 </script>

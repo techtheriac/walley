@@ -39,7 +39,11 @@
           :key="index"
           class="px-8"
         >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <v-list-item-title>
+            <nuxt-link :to="item.link">{{
+              item.title
+            }}</nuxt-link></v-list-item-title
+          >
         </v-list-item>
       </v-list>
     </v-menu>
@@ -135,13 +139,13 @@ export default {
         { title: 'Settings' },
       ],
       categories: [
-        { title: 'Business' },
-        { title: 'Cooking' },
-        { title: 'Fitness' },
-        { title: 'Software' },
-        { title: 'Fashion' },
-        { title: 'Kids' },
-        { title: 'Design' },
+        { title: 'Business', link: '/categories' },
+        { title: 'Cooking', link: '/categories' },
+        { title: 'Fitness', link: '/categories' },
+        { title: 'Software', link: '/categories' },
+        { title: 'Fashion', link: '/categories' },
+        { title: 'Kids', link: '/categories' },
+        { title: 'Design', link: '/categories' },
       ],
       dialog: false,
     }
