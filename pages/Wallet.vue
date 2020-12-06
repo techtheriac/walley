@@ -4,7 +4,14 @@
       <span>Wallet Balance</span>
       <b class="wallet--balance">N 21,000</b>
 
-      <div class="wrapper-status d-flex justify-space-between">
+      <div
+        :class="[
+          'wrapper-status',
+          'd-flex',
+          'justify-space-between',
+          this.$vuetify.breakpoint.smAndDown ? 'flex-column' : 'flex-row',
+        ]"
+      >
         <div class="amount received">
           <div class="d-flex">
             <span class="icon-wrapper icon-received">
@@ -17,7 +24,7 @@
               <small>Received</small>
             </div>
           </div>
-          <v-btn class="mt-3">Withdraw</v-btn>
+          <v-btn class="my-3">Withdraw</v-btn>
         </div>
 
         <div class="amount spent">

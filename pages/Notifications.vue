@@ -40,13 +40,22 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.container__notification {
-  display: grid;
-  grid-template-columns: 300px auto;
-  gap: 1em;
-  padding: 2em;
+@media screen and (min-width: 800px) {
+  .container__notification {
+    display: grid;
+    grid-template-columns: 300px auto;
+    gap: 1em;
+    padding: 2em;
+  }
 }
 
+.container__notification {
+  padding: 1.5em;
+
+  .card--notification {
+    margin-bottom: 1.2em;
+  }
+}
 .card--notification {
   background-color: var(--surface);
   padding: 1em 2em;

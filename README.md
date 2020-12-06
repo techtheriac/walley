@@ -28,7 +28,7 @@
 - Stream Series
 - History
 - Categories (layout is same as discover stream by have category name as heading) -DONE
-- Tickets
+- Tickets - DONE
 - Forgot Password - DONE
 
 

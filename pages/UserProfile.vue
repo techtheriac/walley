@@ -138,7 +138,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 800px) {
   .container__profile {
     display: grid;
     gap: 2.5em;

@@ -1,5 +1,11 @@
 <template>
-  <div class="container__physical px-12 py-8">
+  <div
+    :class="[
+      'container__physical',
+      'py-8',
+      this.$vuetify.breakpoint.smAndDown ? 'px-6' : 'px-12',
+    ]"
+  >
     <div class="card-event mb-4">
       <div class="wrapper-img"></div>
       <div
@@ -20,7 +26,7 @@
           <p>by Toby Adamu</p>
         </div>
 
-        <button class="wrapper-reminder" @click="reminderDialog = true">
+        <button class="wrapper-reminder mb-4" @click="reminderDialog = true">
           <v-icon>mdi-alarm-multiple</v-icon>
           <small>Set a Reminder</small>
         </button>
@@ -32,7 +38,12 @@
       </div>
     </div>
 
-    <div class="details-event">
+    <div
+      :class="[
+        'details-event',
+        this.$vuetify.breakpoint.smAndDown ? 'mt-12' : '',
+      ]"
+    >
       <h4>About this event</h4>
       <p class="description-event">
         Painting is the practice of applying paint, pigment, color or other
