@@ -1,7 +1,9 @@
 <template>
   <slider-container>
-    <div v-for="i in 11" :key="i" class="ml-5">
-      <StreamUpcoming />
+    <div class="d-flex">
+      <div v-for="i in 11" :key="i" class="ml-5">
+        <StreamUpcoming />
+      </div>
     </div>
   </slider-container>
 </template>

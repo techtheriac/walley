@@ -1,9 +1,16 @@
 <template>
   <div class="container__physical px-12 py-8">
-    <div class="card-event">
+    <div class="card-event mb-4">
       <div class="wrapper-img"></div>
       <div
-        class="wrapper-description d-flex justify-space-between align-center px-6"
+        :class="[
+          'wrapper-description',
+          'd-flex',
+          'justify-space-between',
+          'align-center',
+          'px-6',
+          this.$vuetify.breakpoint.smAndDown ? 'flex-column' : 'flex-row',
+        ]"
       >
         <div>
           <div class="tags my-6">
@@ -113,7 +120,7 @@ export default {
   color: var(--secondary);
   font-size: 16px;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 800px) {
   .container__physical {
     display: grid;
     grid-template-columns: 3fr 1.2fr;
@@ -150,7 +157,7 @@ export default {
 .wrapper-img {
   background-image: url('https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
   background-size: cover;
-  height: 70%;
+  height: 65%;
   border-radius: 10px;
 }
 .tags {

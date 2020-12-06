@@ -131,6 +131,9 @@ export default {
       ],
     }
   },
+  methods: {
+    showAddCardDialog() {},
+  },
 }
 </script>
 
@@ -159,6 +162,10 @@ export default {
   .d {
     grid-area: d;
   }
+}
+
+.container__wallet > * {
+  margin-bottom: 1.3em;
 }
 
 .balance--wallet {

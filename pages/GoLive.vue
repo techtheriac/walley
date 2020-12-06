@@ -97,11 +97,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container__live {
-  display: grid;
-  grid-template-columns: auto 400px;
-  padding: 2.5em;
-  gap: 2em;
+@media screen and (min-width: 800px) {
+  .container__live {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    grid-template-rows: auto;
+    padding: 2.5em;
+    gap: 2em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container__live {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px auto;
+    padding: 1em;
+    gap: 20px;
+  }
 }
 
 .overlay {
@@ -111,8 +124,8 @@ export default {
   border-radius: 10px;
   display: flex;
   padding: 1em 0.7em;
-  margin-bottom: 85%;
   margin-top: 3em;
+  margin-bottom: 12rem;
 
   > * + * {
     padding-left: 1em;

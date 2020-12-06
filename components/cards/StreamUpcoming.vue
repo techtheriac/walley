@@ -32,6 +32,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/* @media screen and (max-width: 800px) {
+  .container__card {
+    width: 100px;
+  }
+} */
 .container__card {
   display: grid;
   width: 350px;

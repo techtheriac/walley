@@ -1,10 +1,10 @@
 <template>
   <main class="px-12 py-8">
     <div class="d-flex align-center justify-center mb-4">
-      <h3>Upcoming Streams</h3>
+      <h3>Saved Tickets</h3>
     </div>
     <div class="container__tickets">
-      <div v-for="i in 9" :key="i">
+      <div v-for="i in 6" :key="i">
         <div to="/physicalevent" class="container__card white--text">
           <div class="wrapper-img"></div>
           <div>

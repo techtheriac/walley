@@ -8,7 +8,7 @@
       'px-12',
       'justify-space-between',
       'pt-12',
-      $vuetify.breakpoint.smAndDown ? 'flex-column-reverse' : 'flex-row',
+      this.$vuetify.breakpoint.smAndDown ? 'flex-column-reverse' : 'flex-row',
     ]"
   >
     <div class="footer__info d-flex flex-column">

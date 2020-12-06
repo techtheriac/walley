@@ -23,14 +23,6 @@
           attrs,
         }"
       >
-        <!-- <v-btn
-          color="primary"
-          dark
-          v-bind="attrs"
-          v-on="on"
-        >
-          Dropdown
-        </v-btn> -->
         <span class="small--text" v-bind="attrs" v-on="on">CATEGORIES</span>
       </template>
       <v-list>
