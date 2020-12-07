@@ -18,11 +18,19 @@
         <small class="my-4"
           >Your wallet will be charged with the viewing fee</small
         >
-        <div class="btn-group">
+        <div
+          :class="[
+            'btn-group',
+            'd-flex',
+            this.$vuetify.breakpoint.smAndDown
+              ? 'flex-column-reverse'
+              : 'flex-row',
+          ]"
+        >
           <nuxt-link to="/">
             <btn-secsmall>CANCEL</btn-secsmall>
           </nuxt-link>
-          <btn-primary class="ml-4">PROCEED</btn-primary>
+          <btn-primary class="">PROCEED</btn-primary>
         </div>
       </div>
     </div>
@@ -49,6 +57,9 @@ export default {
 <style lang="scss" scoped>
 $icon-font-size: 40px;
 
+.btn-group {
+  gap: 8px;
+}
 .container__reminder {
   display: grid;
   grid-template-columns: 2fr 3fr;

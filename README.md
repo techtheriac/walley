@@ -34,9 +34,9 @@
 
 
 ## Dialogs
-- Add Card
-- Withdraw
-- Fund Wallet
+- Add Card - DONE
+- Withdraw - DONE
+- Fund Wallet - DONE
 - Remove Card
 - Verification - DONE
 - Book Ticket - DONE
