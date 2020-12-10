@@ -37,11 +37,16 @@ export default {
   border-radius: 50%;
 }
 .container__avatar {
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--primary);
   width: 90px;
   height: 90px;
   padding: 5px;
   border-radius: 50%;
+  transition: 0.9s ease;
+}
+
+.container__avatar:hover {
+  border: 2px solid var(--secondary);
 }
 
 .displace-up {

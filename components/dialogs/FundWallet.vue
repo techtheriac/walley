@@ -27,13 +27,19 @@ export default {
   components: {
     BtnPrimary,
   },
-  data: () => ({}),
+  data: () => ({
+    cardPin: '',
+  }),
   methods: {
     hideDialog() {
-      this.$emit('hide-reminder-dialog', false)
+      this.$emit('hide-fund-dialog', false)
     },
   },
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container__fund-wallet {
+  background-color: var(--surface);
+}
+</style>

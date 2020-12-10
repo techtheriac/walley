@@ -1,16 +1,16 @@
 <template>
   <div>
     <v-dialog v-model="showCard" width="500">
-      <Share />
+      <RemoveCard />
     </v-dialog>
   </div>
 </template>
 
 <script>
-import Share from '~/components/dialogs/Share'
+import RemoveCard from '~/components/dialogs/RemoveCard'
 export default {
   components: {
-    Share,
+    RemoveCard,
   },
   data: () => ({
     showCard: true,

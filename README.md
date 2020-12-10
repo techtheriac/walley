@@ -37,12 +37,12 @@
 - Add Card - DONE
 - Withdraw - DONE
 - Fund Wallet - DONE
-- Remove Card
+- Remove Card - IN PROGRESS
 - Verification - DONE
 - Book Ticket - DONE
-- Ticket
+- Ticket - DONE
 - Live Stream Payment 01 - DONE
-- Live Stream Payment (Failed) - IN PROGRESS
+- Live Stream Payment (Failed) - DONE
 - Live Stream Payment 03
-- Share - IN PROGRESS
+- Share - DONE
 - Reminder - DONE

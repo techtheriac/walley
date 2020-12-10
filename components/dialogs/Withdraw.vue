@@ -1,5 +1,5 @@
 <template>
-  <div class="container__fund-wallet pa-6 d-flex flex-column">
+  <div style="background-color: var(--surface)" class="pa-6 d-flex flex-column">
     <v-icon class="icon-close align-self-end" @click="hideDialog"
       >mdi-close-circle-outline</v-icon
     >
@@ -44,7 +44,7 @@ export default {
   }),
   methods: {
     hideDialog() {
-      this.$emit('hide-reminder-dialog', false)
+      this.$emit('hide-withdraw-dialog', false)
     },
   },
 }

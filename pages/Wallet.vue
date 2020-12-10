@@ -9,6 +9,7 @@
           'wrapper-status',
           'd-flex',
           'justify-space-between',
+          'flex-gap-sm',
           this.$vuetify.breakpoint.smAndDown ? 'flex-column' : 'flex-row',
         ]"
       >
@@ -24,7 +25,7 @@
               <small>Received</small>
             </div>
           </div>
-          <v-btn class="my-3">Withdraw</v-btn>
+          <v-btn class="my-3" @click="showWithdrawDialog">Withdraw</v-btn>
         </div>
 
         <div class="amount spent">
@@ -39,7 +40,7 @@
               <small>Spent</small>
             </div>
           </div>
-          <v-btn class="mt-3">Fund Wallet</v-btn>
+          <v-btn class="mt-3" @click="showFundWalletDialog">Fund Wallet</v-btn>
         </div>
       </div>
     </div>
@@ -70,9 +71,7 @@
     <div class="card-add c card__wallet d-flex align-center justify-center">
       <div class="d-flex align-center flex-column">
         <div class="font-weight-bold text-h4">Add Card</div>
-        <small
-          style="color: var(--secondary); cursor: pointer"
-          @click="showAddCardDialog"
+        <small style="color: var(--secondary); cursor: pointer"
           >click to add</small
         >
       </div>
@@ -92,11 +91,26 @@
       >
       </v-data-table>
     </div>
+
+    <!-- DIALOGS -->
+    <v-dialog v-model="showFundWallet" width="500">
+      <FundWallet @hide-fund-dialog="hideFundWalletDialog" />
+    </v-dialog>
+
+    <v-dialog v-model="showWithdraw" width="500">
+      <Withdraw @hide-withdraw-dialog="hideWithdrawDialog" />
+    </v-dialog>
   </div>
 </template>
 
 <script>
+import FundWallet from '~/components/dialogs/FundWallet'
+import Withdraw from '~/components/dialogs/Withdraw'
 export default {
+  components: {
+    FundWallet,
+    Withdraw,
+  },
   data() {
     return {
       headers: [
@@ -136,10 +150,23 @@ export default {
           transactionAmount: 'N1,300',
         },
       ],
+      showFundWallet: false,
+      showWithdraw: false,
     }
   },
   methods: {
-    showAddCardDialog() {},
+    hideFundWalletDialog(e) {
+      this.showFundWallet = e
+    },
+    showFundWalletDialog() {
+      this.showFundWallet = true
+    },
+    hideWithdrawDialog(e) {
+      this.showWithdraw = e
+    },
+    showWithdrawDialog() {
+      this.showWithdraw = true
+    },
   },
 }
 </script>
@@ -168,6 +195,12 @@ export default {
 
   .d {
     grid-area: d;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper-cardNumber b {
+    font-size: 1.3rem;
   }
 }
 
