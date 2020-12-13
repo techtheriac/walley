@@ -68,7 +68,10 @@
       </div>
     </div>
 
-    <div class="card-add c card__wallet d-flex align-center justify-center">
+    <div
+      class="card-add c card__wallet d-flex align-center justify-center"
+      @click="showAddCardDialog"
+    >
       <div class="d-flex align-center flex-column">
         <div class="font-weight-bold text-h4">Add Card</div>
         <small style="color: var(--secondary); cursor: pointer"
@@ -80,7 +83,9 @@
     <div class="table--wallet d">
       <div class="d-flex justify-space-between">
         <b>Wallet History</b>
-        <small>View all Report</small>
+        <nuxt-link to="/report" style="color: var(--secondary)"
+          >View all Report</nuxt-link
+        >
       </div>
       <v-data-table
         dense
@@ -100,16 +105,23 @@
     <v-dialog v-model="showWithdraw" width="500">
       <Withdraw @hide-withdraw-dialog="hideWithdrawDialog" />
     </v-dialog>
+
+    <v-dialog v-model="showAddCard" width="500">
+      <AddCard @hide-addCard-dialog="hideAddCardDialog" />
+    </v-dialog>
   </div>
 </template>
 
 <script>
 import FundWallet from '~/components/dialogs/FundWallet'
 import Withdraw from '~/components/dialogs/Withdraw'
+import AddCard from '~/components/dialogs/AddCard'
+
 export default {
   components: {
     FundWallet,
     Withdraw,
+    AddCard,
   },
   data() {
     return {
@@ -152,6 +164,7 @@ export default {
       ],
       showFundWallet: false,
       showWithdraw: false,
+      showAddCard: false,
     }
   },
   methods: {
@@ -166,6 +179,12 @@ export default {
     },
     showWithdrawDialog() {
       this.showWithdraw = true
+    },
+    hideAddCardDialog(e) {
+      this.showAddCard = e
+    },
+    showAddCardDialog() {
+      this.showAddCard = true
     },
   },
 }
@@ -248,5 +267,9 @@ export default {
 
 .icon-reset {
   font-size: 14px;
+}
+
+.card-add {
+  cursor: pointer;
 }
 </style>

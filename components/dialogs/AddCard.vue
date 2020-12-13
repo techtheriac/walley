@@ -97,7 +97,7 @@ export default {
   }),
   methods: {
     hideDialog() {
-      this.$emit('hide-reminder-dialog', false)
+      this.$emit('hide-addCard-dialog', false)
     },
   },
 }
@@ -106,5 +106,8 @@ export default {
 <style lang="scss" scoped>
 .flex-gap-sm {
   gap: 1.3em;
+}
+.container__add-card {
+  background-color: var(--surface);
 }
 </style>

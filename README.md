@@ -13,9 +13,9 @@
 - Notification - DONE
 - GO LIVE - IN PROGRESS
 - Upcoming Streams - IN PROGRESS
-- Wallet Page - IN PROGRESS
+- Wallet Page - DONE
 - Live Streams
-- Report
+- Report - IN PROGRESS
 - Ondemand Streams 
   - Free 
     - Initial

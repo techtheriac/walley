@@ -1,0 +1,67 @@
+:root {
+  --secondary: #ff0266;
+  --primary: #ff7597;
+  --text-on-surface: #999999;
+  --text-on-background: #707070;
+  --surface: #2e2e2e;
+  --background: #121212;
+}
+
+@font-face {
+  font-family: 'Avenir Regular';
+  src: url('/fonts/AvenirNextLTPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Bold';
+  src: url('/fonts/AvenirNextLTPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+* {
+  font-family: Avenir Regular, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  font-family: 'Avenir Bold';
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Page Tramsitions */
+
+.page-enter-active,
+.layout-enter-active {
+  transition: all 0.4s ease;
+}
+
+.page-leave-active,
+.layout-leave-active {
+  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.page-enter,
+.page-leave-to,
+.layout-enter,
+.layout-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+
+/* spacing */
+
+.flex-gap-sm {
+  gap: 0.75em;
+}
