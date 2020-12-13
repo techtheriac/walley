@@ -10,6 +10,7 @@
       'px-12',
       'align-baseline',
       'container__navigation',
+      this.$vuetify.breakpoint.smAndDown ? 'justify-space-between' : '',
     ]"
   >
     <nuxt-link to="/">
@@ -100,7 +101,8 @@
 
       <div class="vl-divider"></div>
     </div>
-    <div class="d-flex group--account">
+
+    <div v-if="this.$vuetify.breakpoint.lgAndUp" class="d-flex group--account">
       <nuxt-link to="/notifications">
         <v-icon class="grey--text">mdi-bell</v-icon>
       </nuxt-link>
@@ -108,6 +110,25 @@
         <nuxt-link to="/signin">Login</nuxt-link>
       </btn-primary>
     </div>
+
+    <v-app-bar-nav-icon
+      v-if="this.$vuetify.breakpoint.smAndDown"
+      @click.stop="drawer = !drawer"
+    ></v-app-bar-nav-icon>
+
+    <!-- MOBILE -->
+    <v-navigation-drawer
+      v-model="drawer"
+      width="100%"
+      height="60%"
+      absolute
+      bottom
+      temporary
+    >
+      <div>
+        <h1>Hello</h1>
+      </div>
+    </v-navigation-drawer>
   </nav>
 </template>
 
@@ -140,7 +161,14 @@ export default {
         { title: 'Design', link: '/categories' },
       ],
       dialog: false,
+      drawer: false,
+      group: null,
     }
+  },
+  watch: {
+    group() {
+      this.drawer = false
+    },
   },
   methods: {
     onClick(e) {
